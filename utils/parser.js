@@ -1,10 +1,10 @@
-import _ from "lodash";
-
+import _ from "lodash"
 export function parseNumbers(input) {
-  return {/*write code here*/}
+  const nums = _.map(input, s => Number(s));
+  return _.filter(nums, n => Number.isFinite(n));
 }
 
 export function isValidOperation(operation) {
-  return {/*write code here*/}
+  const ops = ["add", "subtract", "multiply", "divide"];
+  return _.includes(ops, String(operation).toLowerCase());
 }
-
